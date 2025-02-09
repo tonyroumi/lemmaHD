@@ -8,3 +8,50 @@
 ::-webkit-scrollbar{
   @apply hidden
 }
+
+/* Navbar Mobile Menu Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+@keyframes slideAndFade {
+    0% { 
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    100% { 
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.arrow-rotate {
+    transform: rotate(180deg);
+}
+
+.info-box {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out, margin 0.3s ease-out;
+    opacity: 0;
+    display: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: black;
+}
+
+.info-box.active {
+    max-height: 200px;
+    opacity: 1;
+    display: block;
+    padding-top: 1rem;    /* 16px top padding */
+    padding-bottom: 1rem; /* 16px bottom padding */
+    margin-top: 0.5rem;    /* 8px top margin */
+    margin-bottom: 0.5rem; /* 8px bottom margin */
+    background-color: black;
+}
+

@@ -6,6 +6,7 @@ const Book = () => {
   return (
     <div>
         <Header/>
+        <hr className="border-0 h-[5px] md:h-[10px] bg-white mx-auto w-full"/>
         <PackageMenu/>
     </div>
   )

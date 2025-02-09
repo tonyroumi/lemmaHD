@@ -11,7 +11,9 @@ export default {
             colors: {
                 'primary': "#5f6FFF"
             }
-        },
-    },
-    plugins: [],
-}
+            },
+        animation: {
+            'slideIn': 'slideIn 0.3s ease-out'
+        }
+    }
+  } 

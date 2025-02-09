@@ -9,18 +9,20 @@ import Navbar from './components/Navbar'
 
 const App = () => {
   return (
-    <div className='mx-4 sm:mx-[10%]'>
-      <Navbar/>
+    <div className='min-h-screen bg-black'>
+      <div>
+        <Navbar/>
 
 
-      <Routes>
-        <Route path='/' element={<Book/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/portfolio' element={<Portfolio/>}/>  
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/appointment' element={<Appointment/>}/>
+        <Routes>
+          <Route path='/' element={<Book/>}/>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/portfolio' element={<Portfolio/>}/>  
+          <Route path='/contact' element={<Contact/>}/>
+          <Route path='/appointment' element={<Appointment/>}/>
 
-      </Routes>  
+        </Routes>  
+      </div>
     </div>
   )
 }
