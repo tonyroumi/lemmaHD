@@ -84,44 +84,39 @@ const navbar = () => {
                                 </li>
                                 <hr className='border-t-[0.5px] border-gray-600 w-[95%] mx-auto opacity-50'></hr>
                             </NavLink>
-                            <NavLink to='/' onClick={(e) => {
-                                e.preventDefault();
-                                toggleInfo('book');
+                            <NavLink to='/' onClick={() => {
+                                toggleMenu();
+                                navigate('/');
                             }} className='w-full'>
                                 <li className='py-2 animate-fadeIn px-3 flex justify-between items-center' style={{animationDelay: '0.1s'}}>
-                                    <span className="flex justify-center items-center">Book</span>
+                                    <span className="flex items-center">Book</span>
                                     <svg 
-                                        className={`w-4 h-4 arrow ${activeItem === 'book' ? 'arrow-rotate' : ''}`}
+                                        className="w-4 h-4 flex items-center my-auto"
                                         fill="none" 
                                         stroke="currentColor" 
                                         viewBox="0 0 24 24"
                                     >
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
                                 </li>
-                                <div className={`info-box ${activeItem === 'book' ? 'active' : ''} bg-gray-900 px-3 py-2 text-sm`}>
-                                    Book your photography session here
-                                </div>
                                 <hr className='border-t-[0.5px] border-gray-600 w-[95%] mx-auto opacity-50'></hr>
                             </NavLink>
-                            <NavLink to='/portfolio' onClick={(e) => {
-                                e.preventDefault();
-                                toggleInfo('portfolio');
+                            
+                            <NavLink to='/portfolio' onClick={() => {
+                                toggleMenu();
+                                navigate('/portfolio');
                             }} className='w-full'>
                                 <li className='py-2 animate-fadeIn px-3 flex justify-between items-center' style={{animationDelay: '0.2s'}}>
-                                    <span>Portfolio</span>
+                                    <span className="flex items-center">Portfolio</span>
                                     <svg 
-                                        className={`w-4 h-4 arrow ${activeItem === 'portfolio' ? 'arrow-rotate' : ''}`}
+                                        className="w-4 h-4 flex items-center my-auto"
                                         fill="none" 
                                         stroke="currentColor" 
                                         viewBox="0 0 24 24"
                                     >
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
                                 </li>
-                                <div className={`info-box ${activeItem === 'portfolio' ? 'active' : ''} bg-gray-900 px-3 py-2 text-sm`}>
-                                    View our portfolio of stunning photography
-                                </div>
                                 <hr className='border-t-[0.5px] border-gray-600 w-[95%] mx-auto opacity-50'></hr>
                             </NavLink>
                             <NavLink to='/about' onClick={(e) => {
@@ -139,7 +134,7 @@ const navbar = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                     </svg>
                                 </li>
-                                <div className={`info-box ${activeItem === 'about' ? 'active' : ''} bg-gray-900 px-3 py-2 text-sm`}>
+                                <div className={`info-box ${activeItem === 'about' ? 'active' : ''} px-3 py-2 text-sm`}>
                                     Learn more about our team and our mission
                                 </div>
                                 <hr className='border-t-[0.5px] border-gray-600 w-[95%] mx-auto opacity-50'></hr>
@@ -159,8 +154,13 @@ const navbar = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                     </svg>
                                 </li>
-                                <div className={`info-box ${activeItem === 'contact' ? 'active' : ''} bg-gray-900 px-3 py-2 text-sm`}>
-                                    Get in touch with us for any inquiries
+                                <div className={`info-box ${activeItem === 'contact' ? 'active' : ''} px-3 py-2 text-sm`}>
+                                    <strong>Get in touch with us for any inquiries</strong> 
+                                    <div className="mt-3">
+                                        <p>robellemma@gmail.com</p>
+                                        <p>(619) 821-3821</p>
+                                        <p><i>San Diego, California</i></p>
+                                    </div>
                                 </div>
                                 <hr className='border-t-[0.5px] border-gray-600 w-[95%] mx-auto opacity-50'></hr>
                             </NavLink>

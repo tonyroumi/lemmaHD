@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../components/Header'
 import PackageMenu from '../components/PackageMenu'
-
+import Location from '../components/Location'
 const Book = () => {
   return (
     <div>
