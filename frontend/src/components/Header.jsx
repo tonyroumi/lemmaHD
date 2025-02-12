@@ -57,14 +57,14 @@ const Header = () => {
     >
       {/* Content */}
       <div className='flex flex-col items-center justify-center gap-4 text-center mt-[-100px] sm:mt-0'>
-        <p className='text-3xl md:text-4xl lg:text-5xl text-stone-100 font-semibold leading-tight md:leading-tight lg:leading-tight [text-shadow:_4px_4px_8px_rgb(0_0_0_/_100%)]'>
+        <p className='text-3xl md:text-4xl lg:text-5xl text-stone-300 font-semibold leading-tight md:leading-tight lg:leading-tight [text-shadow:_4px_4px_8px_rgb(0_0_0_/_100%)]'>
           Senior Graduation Photos
         </p>
         <button
           onClick={() => {
             document.querySelector('#packages').scrollIntoView({ behavior: 'smooth' });
           }}
-          className='flex items-center gap-2 bg-stone-100 px-8 py-3 rounded-full text-black text-sm shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer'
+          className='flex items-center gap-2 bg-stone-300 px-8 py-3 rounded-full text-black text-sm shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer'
         >
           Book Now <img className='w-3' src={assets.arrow_icon} />
         </button>

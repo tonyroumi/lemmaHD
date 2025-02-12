@@ -1,9 +1,15 @@
 import React, { useState } from 'react'
 import { assets } from '../assets/assets_frontend/assets';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation, useSearchParams } from 'react-router-dom';
 
 const Booking = () => {
   const navigate = useNavigate();
+  const location = useLocation()
+  const [searchParams] = useSearchParams()
+  
+  // Get package info from state
+  const packageType = searchParams.get('package')
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -61,8 +67,8 @@ const Booking = () => {
           <p className='text-gray-600 mb-4 text-center'> Your registration will be confirmed by email </p>
           <h2 className='text-gray-800 text-lg mb-4 text-center'></h2>
           <form className='max-w-2xl mx-auto'>
-            <div className='flex gap-3 mb-3'>
-              <div className='flex-1'>
+            <div className='flex flex-col md:flex-row gap-3 mb-3'>
+              <div className='w-full md:flex-1'>
                 <label htmlFor="firstName" className='block text-gray-700 mb-2'>First Name *</label>
                 <input 
                   type="text" 
@@ -75,7 +81,7 @@ const Booking = () => {
                 />
                 {validationErrors.firstName && <p className='text-red-500 text-sm mt-1'>First name is required</p>}
               </div>
-              <div className='flex-1'>
+              <div className='w-full md:flex-1'>
                 <label htmlFor="lastName" className='block text-gray-700 mb-2'>Last Name *</label>
                 <input 
                   type="text" 
@@ -90,8 +96,8 @@ const Booking = () => {
               </div>
             </div>
 
-            <div className='flex gap-3 mb-3'>
-              <div className='flex-1'>
+            <div className='flex flex-col md:flex-row gap-3 mb-3'>
+              <div className='w-full md:flex-1'>
                 <label htmlFor="phone" className='block text-gray-700 mb-2'>Phone *</label>
                 <div className='flex gap-2'>
                   <select
@@ -118,7 +124,7 @@ const Booking = () => {
                 </div>
                 {validationErrors.phone && <p className='text-red-500 text-sm mt-1'>Phone number is required</p>}
               </div>
-              <div className='flex-1'>
+              <div className='w-full md:flex-1'>
                 <label htmlFor="email" className='block text-gray-700 mb-2'>Email *</label>
                 <input 
                   type="email" 
