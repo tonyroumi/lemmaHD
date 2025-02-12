@@ -7,9 +7,6 @@ const Calendar = () => {
   const [error, setError] = useState(null)
   const [isAuthenticated, setIsAuthenticated] = useState(false)
 
-  const CALENDAR_ID = 'c_790b49e6d3b6169c1d89e411d2413a7ba9e30d13535e7d78ce7d5c10d99c9465@group.calendar.google.com'
-  const API_KEY = 'AIzaSyDE60JZnqQICDqBiZkkvJu-BBeQ7TWYKwo'
-  const CLIENT_ID = '413073229415-j6666dne9gmqph645nmdl2ri7p6nr9r7.apps.googleusercontent.com'
 
   useEffect(() => {
     const initializeGapi = async () => {
