@@ -1,11 +1,15 @@
 @import "tailwindcss";
 
-.active hr{
+/* .active hr{
   @apply block
 }
 
 ::-webkit-scrollbar{
   @apply hidden
+} */
+
+#theme {
+    --color-white: #F5F5F7;
 }
 
 @keyframes slideAndFade {
