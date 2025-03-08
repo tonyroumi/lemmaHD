@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Lemma Photography</title>
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/navbar.css" rel="stylesheet">
+</head>
+<body class="bg-black h-screen overflow-hidden">
+    <!-- Navbar -->
+    <nav class="w-full bg-black">
+        <div class="flex items-center justify-between text-white text-sm py-1 border-b border-white px-4 font-['Helvetica']">
+            <a href="../index.html">
+                <img class="w-14 cursor-pointer" src="../assets/images/logo.svg" alt="lemma_logo" id="logo">
+            </a>
+            
+            <ul class="hidden md:flex items-start gap-5 text-xs">
+                <li><a href="../index.html" class="py-1">BOOK</a>
+                    <hr class="border-none outline-none h-0.5 bg-white w-3/5 m-auto hidden nav-underline">
+                </li>
+                <li><a href="portfolio.html" class="py-1">PORTFOLIO</a>
+                    <hr class="border-none outline-none h-0.5 bg-white w-3/5 m-auto hidden nav-underline">
+                </li>
+                <li><a href="about.html" class="py-1">ABOUT</a>
+                    <hr class="border-none outline-none h-0.5 bg-white w-3/5 m-auto hidden nav-underline">
+                </li>
+                <li><a href="contact.html" class="py-1 border-b border-white">CONTACT</a>
+                    <hr class="border-none outline-none h-0.5 bg-white w-3/5 m-auto hidden nav-underline">
+                </li>
+            </ul>
+
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="6" r="2" />
+                    <circle cx="12" cy="12" r="2" />
+                    <circle cx="12" cy="18" r="2" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <div class="flex justify-center items-center h-[calc(100vh-48px)] bg-black">
+        <div class="bg-stone-800 p-6 rounded-lg shadow-2xl max-w-md w-full border border-white">
+            <div class="flex flex-col items-center space-y-4">
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                    <span class="text-xl text-stone-700 font-semibold">RL</span>
+                </div>
+                
+                <div class="text-center space-y-3">
+                    <h2 class="text-white text-2xl font-bold">Robel Lemma</h2>
+                    
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-center space-x-2">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <p class="text-white">robellemma@gmail.com</p>
+                        </div>
+                        
+                        <div class="flex items-center justify-center space-x-2">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <p class="text-white">(619) 888-1234</p>
+                        </div>
+                        
+                        <div class="flex items-center justify-center space-x-2">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <p class="text-white">San Diego, CA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/navbar.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>

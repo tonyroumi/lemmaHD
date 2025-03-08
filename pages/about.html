@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Lemma Photography</title>
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/navbar.css" rel="stylesheet">
+</head>
+<body class="bg-black">
+    <nav class="w-full bg-black">
+        <div class="flex items-center justify-between text-white text-sm py-1 border-b border-white px-4 font-['Helvetica']">
+            <a href="../index.html">
+                <img class="w-14 cursor-pointer" src="../assets/images/logo.svg" alt="lemma_logo" id="logo">
+            </a>
+            
+            <ul class="hidden md:flex items-start gap-5 text-xs">
+                <li><a href="../index.html" class="py-1">BOOK</a>
+                    <hr class="border-none outline-none h-0.5 bg-white w-3/5 m-auto hidden nav-underline">
+                </li>
+                <li><a href="portfolio.html" class="py-1">PORTFOLIO</a>
+                    <hr class="border-none outline-none h-0.5 bg-white w-3/5 m-auto hidden nav-underline">
+                </li>
+                <li><a href="about.html" class="py-1 border-b border-white">ABOUT</a>
+                    <hr class="border-none outline-none h-0.5 bg-white w-3/5 m-auto hidden nav-underline">
+                </li>
+                <li><a href="contact.html" class="py-1">CONTACT</a>
+                    <hr class="border-none outline-none h-0.5 bg-white w-3/5 m-auto hidden nav-underline">
+                </li>
+            </ul>
+
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="6" r="2" />
+                    <circle cx="12" cy="12" r="2" />
+                    <circle cx="12" cy="18" r="2" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 max-w-6xl pb-10">
+        <div class="text-center text-3xl sm:text-2xl md:text-3xl lg:text-4xl pt-10 text-stone-300">
+            <p>ABOUT <span class="text-stone-500 font-medium">ME</span></p>
+        </div>
+
+        <div class="my-10 flex flex-col gap-12">
+            <div class="mx-auto">
+                <img class="w-full max-w-[480px] rounded-xl" src="../assets/images/about_pic.jpeg" alt="about">
+                <hr class="border-stone-500 my-6 max-w-[480px]">
+            </div>
+            <div class="flex flex-col justify-center gap-6 text-lg sm:text-xl md:text-xl lg:text-2xl text-stone-300">
+                <p>Robel is a senior at UCSD majoring in Business Economics with a deep passion for
+                   videography and vocal engineering. With over two and a half years of experience, 
+                   he specializes in creating visually compelling content and mixing for artists 
+                   emphasizing emotion and storytelling. Working with musicians, brands, and creatives,
+                   he has built a reputation for delivering high-quality production that brings artistic
+                   visions to life. Additionally, Robel is also the co-founder of Play Your Role Studios
+                   and creator of LemmaLTD. Both spaces and networks based in San Diego dedicated to 
+                   professional production and artistic development. Full portfolio coming soon</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/navbar.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>

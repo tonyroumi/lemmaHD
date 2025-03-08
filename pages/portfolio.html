@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Lemma Photography</title>
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/navbar.css" rel="stylesheet">
+</head>
+<body class="bg-black">
+    <!-- Navbar -->
+    <nav class="w-full bg-black">
+        <div class="flex items-center justify-between text-white text-sm py-1 border-b border-white px-4 font-['Helvetica']">
+            <a href="../index.html">
+                <img class="w-14 cursor-pointer" src="../assets/images/logo.svg" alt="lemma_logo" id="logo">
+            </a>
+            
+            <ul class="hidden md:flex items-start gap-5 text-xs">
+                <li><a href="../index.html" class="py-1 border-b border-white">BOOK</a>
+                    <hr class="border-none outline-none h-0.5 bg-white w-3/5 m-auto hidden nav-underline">
+                </li>
+                <li><a href="portfolio.html" class="py-1">PORTFOLIO</a>
+                    <hr class="border-none outline-none h-0.5 bg-white w-3/5 m-auto hidden nav-underline">
+                </li>
+                <li><a href="about.html" class="py-1">ABOUT</a>
+                    <hr class="border-none outline-none h-0.5 bg-white w-3/5 m-auto hidden nav-underline">
+                </li>
+                <li><a href="contact.html" class="py-1">CONTACT</a>
+                    <hr class="border-none outline-none h-0.5 bg-white w-3/5 m-auto hidden nav-underline">
+                </li>
+            </ul>
+
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="6" r="2" />
+                    <circle cx="12" cy="12" r="2" />
+                    <circle cx="12" cy="18" r="2" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <div class="w-full flex flex-col items-center py-8">
+        <!-- Gallery images will be dynamically loaded here -->
+    </div>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/portfolio.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Lemma Photography</title>
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/navbar.css" rel="stylesheet">
+    <link href="../css/calendar.css" rel="stylesheet">
+    <!-- Calendly inline widget script (only load once) -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+</head>
+<body class="bg-black">
+    <!-- Navbar -->
+    <nav class="w-full bg-black">
+        <div class="flex items-center justify-between text-white text-sm py-1 border-b border-white px-4 font-['Helvetica']">
+            <a href="../index.html">
+                <img class="w-14 cursor-pointer" src="../assets/images/logo.svg" alt="lemma_logo" id="logo">
+            </a>
+            
+            <ul class="hidden md:flex items-start gap-5 text-xs">
+                <li><a href="../index.html" class="py-1">BOOK</a>
+                    <hr class="border-none outline-none h-0.5 bg-white w-3/5 m-auto hidden nav-underline">
+                </li>
+                <li><a href="portfolio.html" class="py-1">PORTFOLIO</a>
+                    <hr class="border-none outline-none h-0.5 bg-white w-3/5 m-auto hidden nav-underline">
+                </li>
+                <li><a href="about.html" class="py-1">ABOUT</a>
+                    <hr class="border-none outline-none h-0.5 bg-white w-3/5 m-auto hidden nav-underline">
+                </li>
+                <li><a href="contact.html" class="py-1">CONTACT</a>
+                    <hr class="border-none outline-none h-0.5 bg-white w-3/5 m-auto hidden nav-underline">
+                </li>
+            </ul>
+
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="6" r="2" />
+                    <circle cx="12" cy="12" r="2" />
+                    <circle cx="12" cy="18" r="2" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Calendly inline widget begin -->
+    <div id="calendly-widget" class="calendly-inline-widget" style="min-width:320px;height:100vh;"></div>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the package parameter from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const packageType = urlParams.get('package');
+            
+            // Set the appropriate Calendly URL based on the package
+            let calendlyUrl = "https://calendly.com/lemmalimited/senior-shoot"; // Default URL
+            
+            if (packageType === 'single') {
+                calendlyUrl = "https://calendly.com/lemmalimited/senior-shoot";
+            } else if (packageType === 'duo') {
+                calendlyUrl = "https://calendly.com/lemmalimited/senior-shoot-clone";
+            } else if (packageType === 'group') {
+                calendlyUrl = "https://calendly.com/lemmalimited/duo-shoot-clone";
+            }
+            
+            // Add the styling parameters to the URL
+            calendlyUrl += "?background_color=d6d3d1&primary_color=292524";
+            
+            // Initialize Calendly widget directly instead of using data-url
+            Calendly.initInlineWidget({
+                url: calendlyUrl,
+                parentElement: document.getElementById('calendly-widget')
+            });
+        });
+    </script>
+    <!-- Calendly inline widget end -->
+
+    <script src="../js/navbar.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>

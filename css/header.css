@@ -1,0 +1,64 @@
+header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem;
+    font-family: "Helvetica", sans-serif;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    margin-top: -100px;
+}
+
+.header-title {
+    font-size: 3rem;
+    color: rgb(214, 211, 209);
+    font-weight: 600;
+    line-height: 1.2;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
+}
+
+.book-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgb(214, 211, 209);
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    color: black;
+    font-size: 0.875rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.book-button:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+    header {
+        padding: 0 2.5rem;
+    }
+    .header-title {
+        font-size: 2.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        padding: 0 5rem;
+    }
+    .header-title {
+        font-size: 3rem;
+    }
+}
