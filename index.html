@@ -4,10 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lemma Photography</title>
+    <link href="css/output.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/navbar.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/images/logo.svg">
+    <style>
+        .slideshow-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: slideshow 32s infinite;
+            transition: opacity 2s ease-in-out;
+        }
+        
+        .slide:nth-child(1) {
+            animation-delay: 0s;
+        }
+        
+        .slide:nth-child(2) {
+            animation-delay: 8s;
+        }
+        
+        .slide:nth-child(3) {
+            animation-delay: 16s;
+        }
+        
+        .slide:nth-child(4) {
+            animation-delay: 24s;
+        }
+        
+        @keyframes slideshow {
+            0% {
+                opacity: 0;
+            }
+            4%, 20% {
+                opacity: 1;
+            }
+            24%, 100% {
+                opacity: 0;
+            }
+        }
+        
+        /* Add a dark overlay to make text more readable */
+        .slideshow-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+    </style>
 </head>
 <body class="bg-black">
     <!-- Navbar -->
@@ -140,8 +208,14 @@
     </div>
 
     <!-- Header/Hero Section -->
-    <header class="w-full h-screen flex items-center justify-center px-6 md:px-10 lg:px-20">
-        <div class="flex flex-col items-center justify-center gap-6 text-center mt-[-100px] sm:mt-0">
+    <header class="w-full h-screen flex items-center justify-center px-6 md:px-10 lg:px-20 slideshow-container">
+        <div class="slideshow">
+            <div class="slide" style="background-image: url('assets/images/slideshow_pics/gallery_1.jpg');"></div>
+            <div class="slide" style="background-image: url('assets/images/slideshow_pics/gallery_2.jpg');"></div>
+            <div class="slide" style="background-image: url('assets/images/slideshow_pics/gallery_3.jpg');"></div>
+            <div class="slide" style="background-image: url('assets/images/slideshow_pics/gallery_4.jpg');"></div>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-6 text-center mt-[-100px] sm:mt-0 relative z-10">
             <p class='text-4xl md:text-5xl lg:text-6xl text-stone-300 font-semibold leading-tight md:leading-tight lg:leading-tight [text-shadow:_4px_4px_8px_rgb(0_0_0_/_100%)]'>
                 Senior Graduation Photos
             </p>
@@ -154,13 +228,13 @@
     <!-- Packages Section -->
     <section id="packages" class="flex flex-col items-center gap-4 py-16 text-white border-t border-white">
         <h1 class="text-3xl font-medium drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Packages</h1>
-        <h2 class="italic text-sm sm:text-base md:text-lg text-center max-w-sm sm:max-w-lg md:max-w-4xl lg:max-w-5xl mx-auto px-4">* To secure your booking, a $100 deposit is required, with the remaining balance due at the end of your session. *</h2>
+        <h2 class="italic text-sm sm:text-base md:text-lg text-center max-w-sm sm:max-w-lg md:max-w-4xl lg:max-w-5xl mx-auto px-4"> To secure your booking, a $100 deposit is required, with the remaining balance due at the end of your session.</h2>
         <div class="flex flex-col sm:flex-row justify-start sm:justify-center gap-4 pt-5 w-full px-8 sm:px-4">
             <div class="flex flex-col sm:flex-row gap-6 sm:gap-4 sm:justify-center w-full sm:w-auto">
                 <a href="pages/calendar.html?package=single" class="flex flex-col items-center text-xs cursor-pointer hover:-translate-y-5 transition-all duration-500 w-full sm:w-auto">
                     <div class="w-full sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 mb-2 border border-white/50 bg-stone-300 rounded-lg flex flex-col p-4 text-black text-center">
                         <h2 class="text-lg font-bold text-left">
-                            Single Grad - 1 hour
+                            Single Grad (1 hour)
                             <span class="block mt-2 text-base font-normal">$250</span>
                         </h2>
                         <p class="flex-grow flex items-center italic text-left">Click for more details*</p>
@@ -170,7 +244,7 @@
                 <a href="pages/calendar.html?package=duo" class="flex flex-col items-center text-xs cursor-pointer hover:-translate-y-5 transition-all duration-500 w-full sm:w-auto">
                     <div class="w-full sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 mb-2 border border-white/50 bg-stone-300 rounded-lg flex flex-col p-4 text-black text-center">
                         <h2 class="text-lg font-bold text-left">
-                            Duo Grad - 1 hour
+                            Duo Grad (1-2 hours)
                             <span class="block mt-2 text-base font-normal">$250</span>
                         </h2>
                         <p class="flex-grow flex items-center italic text-left">Click for more details*</p>
@@ -180,7 +254,7 @@
                 <a href="pages/calendar.html?package=group" class="flex flex-col items-center text-xs cursor-pointer hover:-translate-y-5 transition-all duration-500 w-full sm:w-auto">
                     <div class="w-full sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 mb-2 border border-white/50 bg-stone-300 rounded-lg flex flex-col p-4 text-black text-center">
                         <h2 class="text-lg font-bold text-left">
-                            Group Grad - 1-2 hours
+                            Group Grad (1-2 hours)
                             <span class="block mt-2 text-base font-normal">$500-900</span>
                         </h2>
                         <p class="flex-grow flex items-center italic text-left">Click for more details*</p>
@@ -189,9 +263,29 @@
             </div>
         </div>
     </section>
+    
+    <!-- Footer Section -->
+    <footer class="w-full py-4 text-white border-t border-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex flex-col items-center md:items-start">
+                    <img src="assets/images/Lemma.png" alt="Lemma Photography" class="h-10 mb-2">
+                    <p class="text-xs text-gray-400">© Lemma Photography 2025. All rights reserved.</p>
+                </div>
+                
+                <div class="flex items-center gap-4">
+                    <button onclick="document.getElementById('packages').scrollIntoView({behavior: 'smooth'})" class="bg-stone-300 text-black px-6 py-2 rounded-full text-sm hover:scale-105 transition-all duration-300">
+                        Book Now
+                    </button>
+                    
+                    <a href="https://www.instagram.com/lemmaltd/" target="_blank" rel="noopener noreferrer" class="hover:opacity-70 transition-opacity flex items-center justify-center h-10 w-10">
+                        <img src="assets/images/instagram-icon.svg" alt="Instagram" class="w-8 h-8 filter invert">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/navbar.js"></script>
-    <script src="js/slideshow.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>

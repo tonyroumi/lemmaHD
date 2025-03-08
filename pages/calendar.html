@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Appointment - Lemma Photography</title>
+    <link href="../css/output.css" rel="stylesheet">
     <link href="../css/main.css" rel="stylesheet">
     <link href="../css/navbar.css" rel="stylesheet">
     <link href="../css/calendar.css" rel="stylesheet">
@@ -42,39 +43,162 @@
             </button>
         </div>
     </nav>
+    <div id="mobile-menu" class="md:hidden fixed top-0 left-0 w-full h-screen bg-black/80 z-50 hidden flex items-start justify-between transition-all duration-500 ease-in-out font-['Helvetica']">
+        <ul class="flex flex-col items-start gap-4 font-medium w-full text-base pt-8 text-xs text-white">
+            <li class="py-2 px-3 flex justify-between items-center w-full">
+                <img src="../assets/images/logo.svg" alt="Logo" class="w-12">
+                <svg 
+                    id="close-menu-button"
+                    class="w-4 h-4 cursor-pointer" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </li>
+            <hr class="border-t-[0.5px] border-gray-600 w-[95%] mx-auto opacity-50">
+            
+            <a href="../index.html" class="w-full mobile-link">
+                <li class="py-2 px-3 flex justify-between items-center">
+                    <span class="flex items-center">Book</span>
+                    <svg 
+                        class="w-4 h-4 flex items-center my-auto"
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </li>
+                <hr class="border-t-[0.5px] border-gray-600 w-[95%] mx-auto opacity-50">
+            </a>
+            
+            <a href="portfolio.html" class="w-full mobile-link">
+                <li class="py-2 px-3 flex justify-between items-center">
+                    <span class="flex items-center">Portfolio</span>
+                    <svg 
+                        class="w-4 h-4 flex items-center my-auto"
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </li>
+                <hr class="border-t-[0.5px] border-gray-600 w-[95%] mx-auto opacity-50">
+            </a>
+            
+            <div class="w-full">
+                <li class="py-2 px-3 flex justify-between items-center cursor-pointer" data-info="about">
+                    <span>About</span>
+                    <svg 
+                        class="w-4 h-4 arrow"
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </li>
+                <div class="info-box px-3 py-2 text-sm hidden" id="about-info">
+                    <p>Robel is a senior at UCSD majoring in Business Economics with a deep passion for
+                    videography and vocal engineering. With over two and a half years of experience, 
+                    he specializes in creating visually compelling content and mixing for artists 
+                    emphasizing emotion and storytelling. Working with musicians, brands, and creatives,
+                    he has built a reputation for delivering high-quality production that brings artistic
+                    visions to life. Additionally, Robel is also the co-founder of Play Your Role Studios
+                    and creator of LemmaLTD. Both spaces and networks based in San Diego dedicated to 
+                    professional production and artistic development. Full portfolio coming soon</p>
+                </div>
+                <hr class="border-t-[0.5px] border-gray-600 w-[95%] mx-auto opacity-50">
+            </div>
+            
+            <div class="w-full">
+                <li class="py-2 px-3 flex justify-between items-center cursor-pointer" data-info="contact">
+                    <span>Contact</span>
+                    <svg 
+                        class="w-4 h-4 arrow"
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </li>
+                <div class="info-box px-3 py-2 text-sm hidden" id="contact-info">
+                    <strong>Get in touch with us for any inquiries</strong> 
+                    <div class="mt-3">
+                        <p>robellemma@gmail.com</p>
+                        <p>(619) 821-3821</p>
+                        <p><i>San Diego, California</i></p>
+                    </div>
+                </div>
+                <hr class="border-t-[0.5px] border-gray-600 w-[95%] mx-auto opacity-50">
+            </div>
+        </ul>
+    </div>
 
     <!-- Calendly inline widget begin -->
-    <div id="calendly-widget" class="calendly-inline-widget" style="min-width:320px;height:100vh;"></div>
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get the package parameter from the URL
-            const urlParams = new URLSearchParams(window.location.search);
-            const packageType = urlParams.get('package');
-            
-            // Set the appropriate Calendly URL based on the package
-            let calendlyUrl = "https://calendly.com/lemmalimited/senior-shoot"; // Default URL
-            
-            if (packageType === 'single') {
-                calendlyUrl = "https://calendly.com/lemmalimited/senior-shoot";
-            } else if (packageType === 'duo') {
-                calendlyUrl = "https://calendly.com/lemmalimited/senior-shoot-clone";
-            } else if (packageType === 'group') {
-                calendlyUrl = "https://calendly.com/lemmalimited/duo-shoot-clone";
-            }
-            
-            // Add the styling parameters to the URL
-            calendlyUrl += "?background_color=d6d3d1&primary_color=292524";
-            
-            // Initialize Calendly widget directly instead of using data-url
-            Calendly.initInlineWidget({
-                url: calendlyUrl,
-                parentElement: document.getElementById('calendly-widget')
-            });
-        });
-    </script>
+    <div id="calendly-widget" class="calendly-inline-widget ">
+        <!-- The iframe will be updated by JavaScript based on URL parameter -->
+    </div>
     <!-- Calendly inline widget end -->
 
     <script src="../js/navbar.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Add this script to handle package selection -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the package parameter from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const package = urlParams.get('package');
+            
+            // Define Calendly URLs for different packages
+            const calendlyUrls = {
+                'single': 'https://calendly.com/lemmalimited/senior-shoot?background_color=d6d3d1&primary_color=292524',
+                'group': 'https://calendly.com/lemmalimited/duo-shoot-clone?background_color=d6d3d1&primary_color=292524',
+                'duo': 'https://calendly.com/lemmalimited/senior-shoot-clone?background_color=d6d3d1&primary_color=292524',
+                // Add more package types as needed
+                'default': 'https://calendly.com/lemmalimited/senior-shoot?background_color=d6d3d1&primary_color=292524' // Default option
+            };
+            
+            // Get the correct URL based on package parameter
+            const calendlyUrl = package && calendlyUrls[package] ? calendlyUrls[package] : calendlyUrls['default'];
+            
+            // Create and insert the iframe
+            const calendlyWidget = document.getElementById('calendly-widget');
+            calendlyWidget.innerHTML = `
+                <iframe 
+                    src="${calendlyUrl}" 
+                    width="100%" 
+                    height="100vh" 
+                    frameborder="0"
+                    style="min-width:320px;height:100vh;display:flex;align-items:center;justify-content:center;">
+                </iframe>
+            `;
+        });
+    </script>
+
+<footer class="w-full py-4 text-white border-t border-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex flex-col items-center md:items-start">
+                <img src="../assets/images/Lemma.png" alt="Lemma Photography" class="h-10 mb-2">
+                <p class="text-xs text-gray-400">© Lemma Photography 2025. All rights reserved.</p>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <button onclick="window.location.href='../index.html#packages'" class="bg-stone-300 text-black px-6 py-2 rounded-full text-sm hover:scale-105 transition-all duration-300">
+                    Book Now
+                </button>
+                
+                <a href="https://www.instagram.com/lemmaltd/" target="_blank" rel="noopener noreferrer" class="hover:opacity-70 transition-opacity flex items-center justify-center h-10 w-10">
+                    <img src="../assets/images/instagram-icon.svg" alt="Instagram" class="w-8 h-8 filter invert">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* Base styles */
 body {
     margin: 0;
@@ -37,6 +39,8 @@ header {
     max-width: 28rem;
     width: 100%;
 }
+
+
 
 ::-webkit-scrollbar {
     width: 4px;
