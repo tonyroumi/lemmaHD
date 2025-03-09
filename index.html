@@ -218,10 +218,10 @@
     <!-- Header/Hero Section -->
     <header class="w-full h-screen flex items-center justify-center px-6 md:px-10 lg:px-20 slideshow-container">
         <div class="slideshow">
-            <div class="slide" style="background-image: url('assets/images/slideshow_pics/gallery_1.jpg');"></div>
-            <div class="slide" style="background-image: url('assets/images/slideshow_pics/gallery_2.jpg');"></div>
-            <div class="slide" style="background-image: url('assets/images/slideshow_pics/gallery_3.jpg');"></div>
-            <div class="slide" style="background-image: url('assets/images/slideshow_pics/gallery_4.jpg');"></div>
+            <div class="slide" id="slide1"></div>
+            <div class="slide" id="slide2"></div>
+            <div class="slide" id="slide3"></div>
+            <div class="slide" id="slide4"></div>
         </div>
         <div class="flex flex-col items-center justify-center gap-6 text-center mt-[-100px] sm:mt-0 relative z-10">
             <p class='text-4xl md:text-5xl lg:text-6xl text-stone-300 font-semibold leading-tight md:leading-tight lg:leading-tight [text-shadow:_4px_4px_8px_rgb(0_0_0_/_100%)]'>
@@ -242,7 +242,7 @@
                 <a href="pages/calendar.html?package=single" class="flex flex-col items-center text-xs cursor-pointer hover:-translate-y-5 transition-all duration-500 w-full sm:w-auto">
                     <div class="w-full sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 mb-2 border border-white/50 bg-stone-300 rounded-lg flex flex-col p-4 text-black text-center">
                         <h2 class="text-lg font-bold text-left">
-                            Single Grad (1 hour)
+                            Single Session (1 hour)
                             <span class="block mt-2 text-base font-normal">$250</span>
                         </h2>
                         <p class="flex-grow flex items-center italic text-left">Click for more details*</p>
@@ -252,7 +252,7 @@
                 <a href="pages/calendar.html?package=duo" class="flex flex-col items-center text-xs cursor-pointer hover:-translate-y-5 transition-all duration-500 w-full sm:w-auto">
                     <div class="w-full sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 mb-2 border border-white/50 bg-stone-300 rounded-lg flex flex-col p-4 text-black text-center">
                         <h2 class="text-lg font-bold text-left">
-                            Duo Grad (1-2 hours)
+                            Duo Session (1-2 hours)
                             <span class="block mt-2 text-base font-normal">$275</span>
                         </h2>
                         <p class="flex-grow flex items-center italic text-left">Click for more details*</p>
@@ -262,7 +262,7 @@
                 <a href="pages/calendar.html?package=group" class="flex flex-col items-center text-xs cursor-pointer hover:-translate-y-5 transition-all duration-500 w-full sm:w-auto">
                     <div class="w-full sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 mb-2 border border-white/50 bg-stone-300 rounded-lg flex flex-col p-4 text-black text-center">
                         <h2 class="text-lg font-bold text-left">
-                            Group Grad (1-2 hours)
+                            Group Session (1-2 hours)
                             <span class="block mt-2 text-base font-normal">$350-900</span>
                         </h2>
                         <p class="flex-grow flex items-center italic text-left">Click for more details*</p>
@@ -295,5 +295,28 @@
     </footer>
 
     <script src="js/navbar.js"></script>
+
+    <script>
+        // Function to randomize slideshow starting image
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = [
+                'assets/images/slideshow_pics/gallery_1.jpg',
+                'assets/images/slideshow_pics/gallery_2.jpg',
+                'assets/images/slideshow_pics/gallery_3.jpg',
+                'assets/images/slideshow_pics/gallery_4.jpg'
+            ];
+            
+            // Shuffle the array
+            for (let i = slides.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [slides[i], slides[j]] = [slides[j], slides[i]];
+            }
+            
+            // Apply the shuffled images to slides
+            for (let i = 0; i < 4; i++) {
+                document.getElementById(`slide${i+1}`).style.backgroundImage = `url('${slides[i]}')`;
+            }
+        });
+    </script>
 </body>
 </html>
